@@ -5,12 +5,12 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
-st.set_page_config(page_title="Energy consumption", page_icon=":charts_with_upward_trend:", layout="wide")
+st.set_page_config(page_title="Energy consumption", page_icon="📈", layout="wide")
 st.title(":chart_with_upwards_trend: Peak shaving solar sizing")
 st.markdown('<style>div.block-container;</style>',unsafe_allow_html=True)
 
 #loading data used
-df=pd.read_csv(r"C:\Users\vasey\Downloads\Solardashboard\Peak shaving energy.csv")
+df=pd.read_csv("Peak shaving energy.csv")
 
 col1, col2 = st.columns((2))
 df["Date"]= pd.to_datetime(df["Date"])
